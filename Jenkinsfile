@@ -28,7 +28,7 @@ pipeline {
         stage('Docker login') {
             steps {
                 script {
-                    bat "docker login -u swuare/comp367 -p %DOCKERHUB_PWD%"
+                    bat "docker login -u swuare -p %DOCKERHUB_PWD%"
                 }
             }
         }
