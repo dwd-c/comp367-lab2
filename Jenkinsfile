@@ -21,21 +21,21 @@ pipeline {
         stage('Docker build') {
             steps {
                 script {
-                    bat 'docker build -t yourdockerhubusername/yourreponame:1.0 .'
+                    bat 'docker build -t swuare/comp367-lab2:1.0 .'
                 }
             }
         }
         stage('Docker login') {
             steps {
                 script {
-                    bat "docker login -u yourdockerhubusername -p %DOCKERHUB_PWD%"
+                    bat "docker login -u swuare/comp367 -p %DOCKERHUB_PWD%"
                 }
             }
         }
         stage('Docker push') {
             steps {
                 script {
-                    bat 'docker push yourdockerhubusername/yourreponame:1.0'
+                    bat 'docker push swuare/comp367-lab2:1.0'
                 }
             }
         }
