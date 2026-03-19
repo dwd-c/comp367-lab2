@@ -5,7 +5,7 @@ pipeline {
         maven 'Maven-3'
     }
     environment {
-        DOCKERHUB_PWD = credentials('DockerPassword')
+        DOCKERHUB_PWD = credentials('CredentialID_DockerHubPWD')
     }
     stages {
         stage('Checkout') {
